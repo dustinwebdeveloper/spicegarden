@@ -1,0 +1,581 @@
+/* Global Layout Set-up */
+* { 
+    box-sizing: border-box;
+  }
+    
+  body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    background: white;
+  }
+
+  /* Link Styles */
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  a:hover {
+    color: rgb(235, 235, 0);
+  }
+  
+  /* Section Styles */
+  
+  .main-nav {
+    width: 100%;
+    background: white;
+    min-height: 30px;
+    padding: 10px;
+    position: fixed;
+    z-index: 5;
+    text-align: center;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    font-weight: 700;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .nav .navlogo {
+      display: block;
+      margin-right: auto;
+      color: black;
+  }
+  .nav li {
+    padding: 5px 10px 10px 10px;
+  }
+  .nav a {
+    transition: all .5s;
+  }
+  .nav a:hover {
+    color: red;
+  }
+
+  #logoblack {
+    max-width: 130px;
+    margin: -65px auto;
+  }
+  
+  .headline {
+    font-family: sans-serif;
+    color: white;
+    position: relative; /* so it doesn't try to share space with the logo */
+    top: 0; 
+    text-align: center;
+    height: 100%; /* fill up the .videoheader container to make it equal size with the video background */
+    display: flex; 
+    flex-direction: column; /* because it's easiest to vertically align content in a flexbox */
+    justify-content: center; /* aligning items in a flexbox vertically centered */
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+
+    h1 {
+      margin-top: 10px;
+      text-transform: uppercase;
+      font-size: 45px;
+      font-weight: bold;
+    }
+
+    a {
+      display: inline-block;
+      color: white;
+      background: red;
+      font-weight: bold;
+      font-size: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 2%;
+      padding-bottom: 2%;
+      padding-left: 4%;
+      padding-right: 4%;
+      max-width: 50%;
+      border-radius: 50px;
+    }
+    
+    p {
+      font-size: 20px;
+      font-family: serif;
+      display: block;
+      text-transform: capitalize;
+      font-weight: bold;
+      color: white;
+      margin-top: -25px;
+    }
+
+    img {
+      display: block;
+      min-width: 225px;
+      margin-bottom: 10px;
+    }
+
+    #welcome {
+      margin-bottom: -400px;
+      font-weight: bold;
+    }
+
+  }
+  
+  .headlinepointer {
+    display: inline-block;
+    margin-top: 4%;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.75);
+  }
+  
+  .downarrow {
+    max-width: 50px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+
+  .videoheader {
+    background: rgba(0, 0, 0, 0.5);
+    height:100vh;
+
+    img {
+      max-width: 50px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  .video-background {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+  }
+
+  .headercta {
+    color: white;
+    font-weight: bold;
+  }
+
+
+  header {
+    text-align: center;
+    background: url('../images/headerbackground.png') no-repeat top center ;
+    background-size: cover;
+    overflow: hidden;
+    padding-top: 30%;
+    padding-bottom: 30%;
+  
+  }
+  header {
+    line-height: 1.5;
+  }
+  
+  h1 {
+    display: block;
+  }
+  
+  .tag {
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: table;
+    margin: 10px auto;
+  } 
+  
+  .subheadline {
+    color: white;
+  }
+  
+  header a {
+    color: white;
+    font-weight: bold;
+    background: red;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .intro {
+    h2 {
+      max-width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    a {
+      display: inline-block;
+      background: red;
+      color: white;
+      padding: 20px 40px;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    margin-bottom: 65px;
+  }
+
+  .initiativeswrapper {
+    background: rgba(0, 0, 0, 0);
+    margin-bottom: 50px;
+
+    img {
+      max-width: 500px;
+    }
+  }
+
+  .ourfoodwrapper {
+    background: rgba(0, 0, 0, 0);
+    margin-bottom: 50px;
+
+    img {
+      max-width: 500px;
+      border-radius: 10px;
+    }
+  }
+
+  .ourrestaurantswrapper {
+    background: rgba(0, 0, 0, 0);
+    margin-bottom: 50px;
+
+    img {
+      max-width: 500px;
+      border-radius: 10px;
+    }
+  }
+
+  .meetthechefwrapper {
+    background: rgba(0, 0, 0, 0);
+    margin-bottom: 50px;
+
+    iframe {
+      min-width: 560px;
+      min-height: 315px;
+      border-radius: 10px;
+    }
+  }
+
+  .cookingclasseswrapper {
+    background: rgba(0, 0, 0, 0);
+    margin-bottom: 50px;
+
+    img {
+      max-width: 500px;
+      border-radius: 10px;
+    }
+  }
+
+  .initiativesheadline {
+    color: black;
+    font-family: 'roboto', sans-serif;
+    margin-bottom: -50px;
+    padding-top: 25px;
+  }
+
+  .restaurantvideo {
+    // width="560" height="315"
+      max-width: 560px;
+      max-height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+  }
+
+  .chefvideo {
+    max-height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+  .intro-text {
+    padding-top: 0;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 1em;
+    color: black;
+    line-height: 1.4;
+  }
+  
+  .card {
+    margin: 30px auto 0;
+    width: 90%;
+    padding: 20px 40px 40px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0);
+    color: black;
+    font-family: 'Roboto', sans-serif;;
+
+    a {
+      font-family: 'Roboto', sans-serif;
+      display: block;
+      color: white;
+      background: red;
+      font-weight: bold;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 2%;
+      padding-bottom: 2%;
+      max-width: 50%;
+      border-radius: 50px;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-family: sans-serif;
+    }
+
+  }
+
+  .feature-one-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-bottom: -50px;
+    max-width: 100%;
+  }
+
+ .feature-two-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -50px;
+  max-width: 100%;
+  }
+  
+ .feature-three-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -50px;
+  max-width: 100%;
+  }
+
+ .feature-four-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -50px;
+  max-width: 100%;
+  }
+
+  .finduswrapper {
+    background: rgba(0, 0, 0, 0);
+    margin-bottom: 50px;
+
+    img {
+      max-width: 100px;
+    }
+  }
+
+  .findusheadline {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: -50px;
+    padding-top: 25px;
+  }  
+
+  footer {
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    padding: 20px 0 40px 20px;
+    margin-top: 100px;
+    background: white;
+    color: black; 
+    font-weight: bold;
+  }
+  
+  footer .copyright {
+    top: -8px;
+    font-size: .75em;
+  }
+  
+  /* Styles for larger screens */
+  @media screen and (min-width: 768px) {
+  
+    header {
+      min-height: 470px;
+    }
+  
+    .nav {
+      max-width: 1200px;
+      padding: 0 30px;
+    }
+  
+    main {
+      padding-top: 20px;
+      padding-bottom: 100px;
+    }
+  
+    main p {
+      line-height: 1.6em;
+    }
+
+    .offerwrapper {
+      max-width: 100%;
+    }
+
+    .offers {
+
+      div {
+        display: inline-block;
+        flex: 1 0 30%;
+      }
+
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    footer {
+      font-size: 1.3em;
+      max-width: 1200px;
+      margin: 40px auto;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1em;
+      margin-left: 1em;
+      margin-right: 1em;
+
+      p {
+        margin-bottom: -10px;
+        margin-top: 90px;
+      }
+
+      a {
+        margin-bottom: 90px;
+      }
+    }
+
+    .restaurantvideo {
+      order: 1;
+      margin-left: unset;
+      margin-right: unset;
+      margin-bottom: unset;
+      
+      iframe {
+        min-width: 560px;
+        min-height: 315px;
+      }
+    }
+
+    .intro-text {
+      
+      padding-top: 0;
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-bottom: 1.5em;
+      color: black;
+      line-height: 1.4;
+    }
+
+    .introtextwrapper {
+      border-radius: 10px;
+      max-width: 512px;
+      box-shadow: 0px 20px 40px rgba(0,0,0,0.4);
+      font-size: 16px;
+      margin-left: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+
+  }
+  
+  @media screen and (min-width: 1024px) {
+
+    .headline {
+      img {
+        min-width: 400px;
+        padding-bottom: 0;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      a {
+        padding: 20px 40px;
+        margin: auto 10px;
+      }
+    }
+
+    .feature-one-img {
+      order: 1;
+    }
+    
+    .feature-three-img {
+      order: 1;
+    }
+    
+    .feature-five-img {
+      order: 1;
+    }
+
+    .contentwrapper {
+      margin: auto;
+    }
+
+    .ourfoodwrapper {
+      background: rgba(0, 0, 0, 0);
+      margin-bottom: 50px;
+  
+      img {
+        max-width: 600px;
+        border-radius: 10px;
+      }
+    }
+  
+    .ourrestaurantswrapper {
+      background: rgba(0, 0, 0, 0);
+      margin-bottom: 50px;
+  
+      img {
+        max-width: 600px;
+        border-radius: 10px;
+      }
+    }
+  
+    .meetthechefwrapper {
+      background: rgba(0, 0, 0, 0);
+      margin-bottom: 50px;
+  
+      iframe {
+        min-width: 560px;
+        min-height: 315px;
+        border-radius: 10px;
+      }
+    }
+  
+    .cookingclasseswrapper {
+      background: rgba(0, 0, 0, 0);
+      margin-bottom: 50px;
+  
+      img {
+        max-width: 600px;
+        border-radius: 10px;
+      }
+    }
+
+    .card {
+      a {
+        border-radius: 50px;
+        font-size: 15px;
+      }
+    }
+
+  }
